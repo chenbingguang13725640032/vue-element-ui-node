@@ -5,6 +5,12 @@ import store from './store'
 import './plugins/element.js'
 import axios from "axios"
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/';
+// axios拦截器
+axios.interceptors.request.use(config=>{
+  config.headers['Authorization'] = sessionStorage.getItem("token");
+  // 在最后必须return config;这是固定语法
+  return config;
+})
 Vue.prototype.$http = axios;
 
 // 导入全局样式表
