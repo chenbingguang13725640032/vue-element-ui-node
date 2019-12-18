@@ -26,3 +26,8 @@ html, body, #app {
 .el-pagination{
     margin-top: 20px;
 }
+
+.el-cascader-panel{
+    height: 300px;
+    overflow: hidden;
+}

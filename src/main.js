@@ -17,8 +17,9 @@ Vue.prototype.$http = axios;
 import "./assets/css/global.css"
 // 导入阿里字体图标库
 import "./assets/css/iconfont.css"
+import TreeTable from "vue-table-with-tree-grid"
 Vue.config.productionTip = false
-
+Vue.component("tree-table",TreeTable)
 new Vue({
   router,
   store,
